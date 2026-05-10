@@ -5,7 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run dev --workspace=@wuxing/game-core",
+    "build": "npm run build --workspace=@wuxing/game-core",
+    "test": "npm run test --workspace=@wuxing/game-core",
+    "lint": "eslint . --ext .ts,.tsx,.cjs",
+    "format": "prettier --write .",
+    "typecheck": "npm run typecheck --workspace=@wuxing/game-core"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.59.2",
