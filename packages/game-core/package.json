@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@wuxing/shared": "*"
+    "@wuxing/shared": "*",
+    "phaser": "^4.1.0"
   },
   "devDependencies": {
     "happy-dom": "^20.0.0",
