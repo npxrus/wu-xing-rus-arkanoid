@@ -33,7 +33,7 @@ export class MainMenuScene extends Phaser.Scene {
         .setInteractive();
       text.on('pointerover', () => text.setColor('#f4d03f'));
       text.on('pointerout', () => text.setColor('#ffffff'));
-      text.on('pointerdown', () => console.log(`Выбрана стихия: ${el}`));
+      text.on('pointerdown', () => this.scene.start('GameScene'));
     });
   }
 }

@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { BootScene } from './scenes/BootScene';
 import { MainMenuScene } from './scenes/MainMenuScene';
+import { GameScene } from './scenes/GameScene';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -12,13 +13,13 @@ const config: Phaser.Types.Core.GameConfig = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  scene: [BootScene, MainMenuScene],
+  scene: [BootScene, MainMenuScene, GameScene],
   physics: {
-    default: 'matter',
-    matter: {
-      gravity: { y: 0 },
-      debug: false,
-    },
+    default: 'arcade',
+    arcade: {
+      gravity: {x: 0, y: 0},
+      debug: true
+    }
   },
 };
 
